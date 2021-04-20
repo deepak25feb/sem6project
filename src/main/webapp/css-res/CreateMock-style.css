@@ -1,0 +1,87 @@
+body {
+  font-family: 'Comfortaa', cursive;
+  
+}
+h1,h2,h3,h4,h5,h6 {
+  text-align: center;
+}
+.que-addon {
+  text-align: left;
+  color: black;
+  font-size: 1.5em;
+}
+.que {
+  text-align: left;
+  color: gray;
+  font-size: 2.5em;
+}
+.que-text {
+  border: 0px;
+  outline: none;
+  font-size: 2.5em;
+  color: black;
+}
+
+.ans-text {
+  border: 0px;
+  outline: none;
+  font-size: 1.5em;
+  color: black;
+}
+
+.que-text:active {
+  outline: 0;
+  border: 0px;
+}
+input[type="checkbox"]:checked {
+  background-color: gray;
+}
+.ans {
+  color: gray;
+  font-size: 1.5em;
+}
+
+/* Style for Separator */
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.separator::before, .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid silver;
+}
+.separator::before {
+    margin-right: .25em;
+}
+.separator::after {
+    margin-left: .25em;
+}
+.preview-text {
+  color: silver;
+}
+.custom {
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border: 1px solid black;
+}
+.status {
+  padding: .5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 7px;
+}
+
+@keyframes shake {
+  0% {left: 0}
+  1% {left: -3px}
+  2% {left: 5px}
+  3% {left: -8px}
+  4% {left: 8px}
+  5% {left: -5px}
+  6% {left: 3px}
+  7% {left: 0}
+}

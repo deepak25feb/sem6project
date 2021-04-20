@@ -1,0 +1,219 @@
+
+body{
+    background-color: #695681;
+}
+header{
+    background-color: #695681;
+    /* box-shadow: 1px 5px 8px #8B81FF; */
+    box-shadow: 3px 5px 20px 1px #2b2a2c;
+    /* border-radius: 10px; */
+    display: flex;
+    /* border : 2px solid blue; */
+    margin-top: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+}
+
+.changePhoto:hover{
+    background-color: #2b2a2c25;
+    cursor: pointer;
+}
+
+.class2{
+    /* border : 2px solid yellow; */
+    width: 50%;
+    flex-grow: 1;
+    
+}
+.subgroup1{   
+    /* border : 2px solid red; */
+    height: 45%;
+    display: flex;
+    
+}
+.subgroup2{
+    /* border : 2px solid green; */
+    flex-grow: 1;
+    display: flex;
+}
+
+.class2 .subgroup1 .teacherName{  /*Deepak Singh*/
+    margin-left: 0.5%;
+    /* border : 2px solid violet; */
+    width: 50%;
+    font-weight: bolder;
+    font-family: serif;
+    
+}
+
+.class2 .subgroup2 p{  /*abc@gmail.com*/
+    margin-left: 0.5%;
+    width: 50%;
+    font-weight: bolder;
+    
+    font-family:  serif;
+    
+}
+
+.class2 .subgroup1 .subsubgroup1{   /*Logout*/
+    flex-grow: 1;
+    text-align : end;
+    /* border : 2px solid burlywood; */
+    
+
+}
+
+.class2 .subgroup2 .subsubgroup1{
+    flex-grow: 1;
+    text-align : end;
+    /* border : 2px solid coral; */
+    
+}
+
+.class2 .subgroup1 .subsubgroup1 .logoutImage{  /* logout Logo*/
+    /* border : 5px solid green; */
+    position: relative;
+    bottom: -15%;
+    right: 2%;
+}
+
+.logoutImage:hover{
+    background-color: #2b2a2c25;
+    cursor: pointer;
+    border-radius: 15px;
+
+}
+.accountSetting:hover{
+    background-color: #2b2a2c25;
+    cursor: pointer;
+    border-radius: 15px;
+    
+}
+
+.class2 .subgroup2 .subsubgroup1 .accountSetting{  /* Account Setting Logo*/
+    /* border : 5px solid green; */
+    position: relative;
+    bottom: -15%;
+    right: 2%;
+}
+
+
+
+/*Left Side */
+.class1{
+    /* border : 2px solid blue; */
+    width: 20%;
+    position : relative;
+    
+}
+img{
+    width: 100px;
+    height: 100px;
+    /* border : 2px solid red; */
+    margin-bottom: 10%;
+    margin-left: 5%;
+}
+
+.class1 p{
+    /* border : 2px solid red; */
+    font-size: 10px;
+    position : absolute; bottom:-5px; left:25px;
+}
+
+/*Navigation*/
+nav{
+    /* border : 2px solid black; */
+    display: flex;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 1%;
+}
+
+.nav1{
+    /* border : 2px solid #008000; */
+    width : 33%;
+    text-align: center;
+    margin : 1%;
+    box-shadow: 3px 5px 20px 1px #2b2a2c;
+    border-radius: 22px;
+    
+}
+
+.nav1:hover{
+    background-color: #2b2a2c25;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px 5px #2b2a2c;
+}
+.nav2{
+    /* border : 2px solid #008000; */
+    width : 33%;
+    text-align: center;
+    margin : 1%;
+    box-shadow: 3px 5px 20px 1px #2b2a2c;
+    border-radius: 22px;
+}
+.nav2:hover{
+    background-color: #2b2a2c25;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px 5px #2b2a2c;
+}
+.nav3{
+    /* border : 2px solid #008000; */
+    flex-grow: 1;
+    text-align: center;
+    margin : 1%;
+    box-shadow: 3px 5px 20px 1px #2b2a2c;
+    border-radius: 22px;
+}
+.nav3:hover{
+    background-color: #2b2a2c25;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px 5px #2b2a2c;
+}
+.nav4{
+    /* border : 2px solid #008000; */
+    width : 33%;
+    text-align: center;
+    margin : 1%;
+    box-shadow: 3px 5px 20px 1px #2b2a2c;
+    border-radius: 22px;
+}
+.nav4:hover{
+    background-color: #2b2a2c25;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px 5px #2b2a2c;
+}
+.nav5{
+    /* border : 2px solid #008000; */
+    width : 33%;
+    text-align: center;
+    margin : 1%;
+    box-shadow: 3px 5px 20px 1px #2b2a2c;
+    border-radius: 22px;
+}
+.nav5:hover{
+    background-color: #2b2a2c25;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px 5px #2b2a2c;
+}
+.nav6{
+    /* border : 2px solid #008000; */
+    flex-grow: 1;
+    text-align: center;
+    margin : 1%;
+    box-shadow: 3px 5px 20px 1px #2b2a2c;
+    border-radius: 22px;
+}
+.nav6:hover{
+    background-color: #2b2a2c25;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px 5px #2b2a2c;
+}
+.mockImage{
+    margin-top: 5%;
+    width : 50;
+    height : 50;
+    margin : 1%;
+    text-shadow: chartreuse;
+}

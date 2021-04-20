@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Teacher Authentication Error</title>
+  <link rel="stylesheet" href="./style.css">
+<script>
+function returnToTeacherAuthentication() {
+      location.replace("http://localhost:8080/webpages/TeacherAuthentication/index.html")
+    }
+</script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<header>
+<canvas id="screen" width="800" height="800"></canvas>
+
+<div id="box">
+
+  <h1 onclick="returnToTeacherAuthentication()">RETRY</h1>
+  <h2>USER ALREADY EXISTS!!</h2>
+  
+  
+</div>
+</header>
+
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

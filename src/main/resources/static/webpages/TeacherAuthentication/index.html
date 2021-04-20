@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Teacher Authentication</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section>
+  <div class="container">
+    <div class="form sign-in-form">
+      <div class="wrapper">
+      
+      
+        <form action="#" id="myFormLogin">
+          <h1>Login</h1>
+          <p>use your email and password to sign in</p>
+          <input type="email" placeholder="Email" name="email">
+          <input type="password" placeholder="Password" name="password">
+          <button id="btnSubmitLogin" style="background-color: #ea4c89;">Login</button>
+        </form>
+        
+        
+      </div>
+    </div>
+    <div class="form sign-up-form active">
+      <div class="wrapper">
+
+
+
+
+
+
+
+
+        <form action="#" id="myForm">
+          <h1>Sign up</h1>
+          <p>Please, provide all the correct info to create an account</p>
+          <input type="text" placeholder="Full Name" name="name">
+          <input type="email" placeholder="Email" name="email">
+          <input type="password" placeholder="Password" name="password">
+          <button id="btnSubmit" style="background-color: #ea4c89;">Sign Up</button>
+        </form>
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-left">
+          <h1>Create Account</h1>
+          <p>or</p>
+          <button id="signInButton">Login</button>
+        </div>
+        <div class="overlay-right">
+          <h1>Please, Login</h1>
+          <p>or</p>
+          <button id="signUpButton">Create Account</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <script  src="./script.js"></script>
+
+  <script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document
+      .getElementById('myForm')
+      .addEventListener('submit', handleForm);
+  });
+
+
+  function handleForm(ev) {
+    ev.preventDefault(); //stop the page reloading
+    //console.dir(ev.target);
+    let myForm = ev.target;
+    let fd = new FormData(myForm);
+
+    // //add more things that were not in the form
+    // fd.append('api-key', 'myApiKey');
+
+    //look at all the contents
+    for (let key of fd.keys()) {
+      console.log(key, fd.get(key));
+    }
+    let json = convertFD2JSON(fd);
+
+    //send the request with the formdata
+    let url = 'http://localhost:8080/mapTeacher';
+    let h = new Headers();
+    h.append('Content-type', 'application/json');
+    h.append('Access-Control-Allow-Origin','no-cors')
+
+    let req = new Request(url, {
+      headers: h,
+      body: json,
+      method: 'POST',
+    });
+    //console.log(req);
+    fetch(req)
+     .then((res) => res.json())
+      .then((data) => {
+        console.log('Response from server');
+        console.log(data);
+        if(data[0]=="true"){
+			location.replace("../../dashboard");
+			console.log('true?');
+		}else{
+			location.replace("../homepage/TeacherError/index.html");
+			console.log('false?');
+		}
+      })
+      .catch(console.warn);
+  }
+
+  function convertFD2JSON(formData) {
+        let obj = {};
+        for (let key of formData.keys()) {
+          obj[key] = formData.get(key);
+        }
+        return JSON.stringify(obj);
+      }
+      
+      
+//-----------------------------------Login Javascript Logic
+      document.addEventListener('DOMContentLoaded', () => {
+    document
+      .getElementById('myFormLogin')
+      .addEventListener('submit', handleForm1);
+  });
+
+
+  function handleForm1(ev) {
+    ev.preventDefault(); //stop the page reloading
+    //console.dir(ev.target);
+    let myForm1 = ev.target;
+    let fd1 = new FormData(myForm1);
+
+    // //add more things that were not in the form
+    // fd.append('api-key', 'myApiKey');
+
+    //look at all the contents
+    for (let key1 of fd1.keys()) {
+      console.log(key1, fd1.get(key1));
+    }
+    let json1 = convertFD2JSON1(fd1);
+
+    //send the request with the formdata
+    let url = 'http://localhost:8080/teacherLogin';
+    let h = new Headers();
+    h.append('Content-type', 'application/json');
+    h.append('Access-Control-Allow-Origin','no-cors')
+
+    let req = new Request(url, {
+      headers: h,
+      body: json1,
+      method: 'POST',
+    });
+    //console.log(req);
+    fetch(req)
+     .then((res) => res.json())
+      .then((data) => {
+        console.log('Response from server');
+        console.log(data);
+        if(data[0]=="true"){
+			location.replace("../../dashboard");
+			console.log('true?');
+		}else{
+			location.replace("../../dashboard");
+			console.log('false?');
+		}
+      })
+      .catch(console.warn);
+  }
+
+  function convertFD2JSON1(formData) {
+        let obj1 = {};
+        for (let key of formData.keys()) {
+          obj1[key] = formData.get(key);
+        }
+        return JSON.stringify(obj1);
+      }
+
+</script>
+
+</body>
+</html>
